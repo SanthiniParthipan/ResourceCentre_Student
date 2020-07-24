@@ -136,13 +136,45 @@ public class ResourceCentreTest {
 	@Test
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
-		// write your code here
+		assertNotNull("Is the list of camcorders available?", camcorderList);
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+		
+		//Error Condition
+		Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+		assertFalse("Is available camcorder CC0011 is returned (false)?", isReturned);
+		
+		//Normal Condition
+		cc2.setIsAvailable(false);
+		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
+		assertTrue("Is borrowed camcorder CC0012 returned (true)?", isReturned);
+		
+		//Error
+		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0013");
+		assertTrue("Is camcorder CC0013 returned (false)?", isReturned);
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
-		// write your code here
+				//Let's load the list!!
+				assertNotNull("Is the list of Chromebooks available?", chromebookList);
+				ResourceCentre.addChromebook(chromebookList, cb1);
+				ResourceCentre.addChromebook(chromebookList, cb2);
+						
+				//Error Condition
+				Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
+				assertFalse("Is available Chromebook CB0011 returned (false)?", isReturned);
+						
+				//Normal Condition
+				cb2.setIsAvailable(false);
+				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0012");
+				assertTrue("Is borrowed Chromebook CB0012 returned (true)?", isReturned);
+						
+				//Error
+				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+				assertTrue("Is non-existent Chromebook CB0013 returned (false)?", isReturned);
+	
 	}
 	
 	@After
