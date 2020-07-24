@@ -95,6 +95,8 @@ public class ResourceCentreTest {
 		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "22/07/2020");
 		assertEquals("Test that Chromebook arraylist size is 2?", 1, chromebookList.size());
 		ResourceCentre.doLoanChromebook(chromebookList, cc1.getAssetTag(), cc1.getDueDate());
+		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+        assertTrue("Test if an available item is ok to loan?", ok);
 	}
 	
 	@Test
