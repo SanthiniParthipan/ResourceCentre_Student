@@ -171,13 +171,21 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+		// FIRDAUS
 		// write your code here
+		String assetTag = Helper.readString("Enter asset tag > ");
+		String assetDescription = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+		
+		Chromebook cb = new Chromebook(assetTag, assetDescription, os);
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
+		//FIRDAUS
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -222,6 +230,7 @@ public class ResourceCentre {
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
+		//santhini
 		boolean isReturned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
@@ -250,6 +259,7 @@ public class ResourceCentre {
 	}
 
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
+		//Santhini
 		boolean isReturned = false;
 		for(int i = 0;i<chromebookList.size();i++) {
 
@@ -272,11 +282,15 @@ public class ResourceCentre {
 			System.out.println("chromebook" +tag+"returned");
 		}
 		
+
 	}
+
+	public String concatenate(String one, String two){
+        return "hello";
+}
 
 	public String concatenate_Santhini(String one, String two){
         return "hello";
 }
-// return hello
-	
+
 }
