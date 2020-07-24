@@ -211,14 +211,47 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		// write your code here
-		return true;
-	}
-	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		
-		
-	}
+	    // KWEH JIA XIN & ELAINE
+	    ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag1 = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag1, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag1 + " loaned out");
+	    }
+	    return true;
+	  }
+
+	  public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
+	    // KWEH JIA XIN & ELAINE
+	    ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag + " loaned out");
+	    }
+	    // return true;
+
+	    isLoaned = false;
+
+	    for (int i = 0; i < chromebookList.size(); i++) {
+	      if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
+	          && chromebookList.get(i).getIsAvailable() == true) {
+	        chromebookList.get(i).setIsAvailable(false);
+	        chromebookList.get(i).setDueDate(due);
+	        isLoaned = true;
+	      }
+	    }
+	    // return isLoaned;
+
+	  }
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
@@ -257,6 +290,11 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
+	public String concatenate(String one, String two){
+        return "hello";
+
+	}
+}	
 
 
-}
+
