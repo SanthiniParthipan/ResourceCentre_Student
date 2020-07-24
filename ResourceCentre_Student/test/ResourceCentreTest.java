@@ -99,7 +99,6 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-
 	  public  void doLoanCamcorderTest() {
 	    //fail("Not yet implemented");
 	    // write your code here
@@ -120,11 +119,13 @@ public class ResourceCentreTest {
 	      
 	  }
 
-
 	@Test
-	public void doLoanChromebookTest() //elaine {
+
+	public void doLoanChromebookTest() { //elaine 
+
 		//fail("Not yet implemented");
 		// write your code here
+
 		boolean isfound=false;
 		for(int i =0;i<chromebookList.size();i++) {
 		    if(chromebookList.get(i).getIsAvailable() == true) {
