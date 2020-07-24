@@ -87,14 +87,14 @@ public class ResourceCentreTest {
 	@Test
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
-		// write your code here
 		
-	}
 	
 	@Test
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
-		// write your code here
+		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "22/07/2020");
+		assertEquals("Test that Chromebook arraylist size is 2?", 1, chromebookList.size());
+		ResourceCentre.doLoanChromebook(chromebookList, cc1.getAssetTag(), cc1.getDueDate());
 	}
 	
 	@Test
