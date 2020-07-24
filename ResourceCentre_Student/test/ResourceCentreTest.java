@@ -159,8 +159,11 @@ public class ResourceCentreTest {
         ResourceCentre.addCamcorder(camcorderList, cc1);
         cc1.setIsAvailable(false);
         isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
-        assertTrue("Test if available camcorder CC0011 is returned -false?", isReturned);
+        assertTrue("Test if available camcorder CC0011 is returned -true", isReturned);
 
+        // error
+        isReturned =ResourceCentre.doReturnCamcorder(camcorderList, "CCO13");
+        assertFalse("Test if non-exsisting amcorder CC013 is returned - false",isReturned);
 	} 
 	@Test
 	public void doReturnChromebookTest() {
@@ -181,8 +184,13 @@ public class ResourceCentreTest {
 		        ResourceCentre.addChromebook(chromebookList, cb2);
 		        cc2.setIsAvailable(false);
 		        isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CC0012");
-		        assertFalse("Test if available chromebook CC0011 is returned -false?", isReturned);       
+		        assertTrue("Test if available chromebook CC0011 is returned -true", isReturned);       
 	
+		        // error
+		        ResourceCentre.doReturnChromebook(chromebookList, "CCO13");
+		        assertFalse("Test if non-exsisting chromebook CC013 is returned - false",isReturned);
+			} 
+		        
 	}
 	
 	@After
