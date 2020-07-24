@@ -171,13 +171,42 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+<<<<<<< HEAD
+//		Chromebook cb =null;
+		// FIRDAUS
 		// write your code here
+		String assetTag = Helper.readString("Enter asset tag > ");
+		String assetDescription = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+		
+		Chromebook cb = new Chromebook(assetTag, assetDescription, os);
 		return cb;
+=======
+		Chromebook cb =null;
+	    // FIRDAUS
+        // write your code here
+        String assetTag = Helper.readString("Enter asset tag > ");
+        String assetDescription = Helper.readString("Enter description > ");
+        String os = Helper.readString("Enter operating system > ");
+       
+        Chromebook cb = new Chromebook(assetTag, assetDescription, os);
+        return cb;
+
+>>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
+<<<<<<< HEAD
 		// write your code here
+		//FIRDAUS
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
+=======
+	    //FIRDAUS
+        chromebookList.add(cb);
+        System.out.println("Chromebook added");
+
+>>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -254,6 +283,7 @@ public class ResourceCentre {
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
+		//santhini
 		boolean isReturned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
@@ -282,8 +312,9 @@ public class ResourceCentre {
 	}
 
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
+		//Santhini
 		boolean isReturned = false;
-		for(int i = 0;i<chromebookList.size()i++) {
+		for(int i = 0;i<chromebookList.size();i++) {
 
 			if(tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())&& chromebookList.get(i).getIsAvailable()==false) {
 				chromebookList.get(i).setIsAvailable(true);
@@ -295,6 +326,11 @@ public class ResourceCentre {
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
+<<<<<<< HEAD
+
+		// write your code here
+		// write your code here
+=======
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag=Helper.readString("Enter asset tag>");
 		Boolean isReturned = doReturnChromebook(chromebookList,tag);
@@ -304,7 +340,12 @@ public class ResourceCentre {
 			System.out.println("chromebook" +tag+"returned");
 		}
 		
+>>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	}
+<<<<<<< HEAD
+	
+=======
+>>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	public String concatenate(String one, String two){
         return "hello";
 }
@@ -313,5 +354,6 @@ public class ResourceCentre {
         return "hello";
 }
 // return hello1
+	// return 1
 	
 }
