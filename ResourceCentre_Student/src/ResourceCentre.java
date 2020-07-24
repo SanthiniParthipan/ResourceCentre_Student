@@ -171,8 +171,6 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-<<<<<<< HEAD
-//		Chromebook cb =null;
 		// FIRDAUS
 		// write your code here
 		String assetTag = Helper.readString("Enter asset tag > ");
@@ -181,32 +179,13 @@ public class ResourceCentre {
 		
 		Chromebook cb = new Chromebook(assetTag, assetDescription, os);
 		return cb;
-=======
-		Chromebook cb =null;
-	    // FIRDAUS
-        // write your code here
-        String assetTag = Helper.readString("Enter asset tag > ");
-        String assetDescription = Helper.readString("Enter description > ");
-        String os = Helper.readString("Enter operating system > ");
-       
-        Chromebook cb = new Chromebook(assetTag, assetDescription, os);
-        return cb;
-
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-<<<<<<< HEAD
 		// write your code here
 		//FIRDAUS
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
-=======
-	    //FIRDAUS
-        chromebookList.add(cb);
-        System.out.println("Chromebook added");
-
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -240,46 +219,14 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-	    // JIAXIN & ELAINE
-	      ResourceCentre.retrieveAllChromebook(chromebookList);
-	      String tag1 = Helper.readString("Enter assest tag > ");
-	      String due = Helper.readString("Enter due date > ");
-	      Boolean isLoaned = doLoanChromebook(chromebookList, tag1, due);
-	      if (isLoaned == false) {
-	        System.out.println("Invalid asset tag");
-
-	      } else {
-	        System.out.println("Chromebook " + tag1 + " loaned out");
-	      }
-	      return true;
-	    }
+		// write your code here
+		return true;
+	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		 // JIA XIN & ELAINE
-	      ResourceCentre.retrieveAllChromebook(chromebookList);
-	      String tag = Helper.readString("Enter assest tag > ");
-	      String due = Helper.readString("Enter due date > ");
-	      Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
-	      if (isLoaned == false) {
-	        System.out.println("Invalid asset tag");
-
-	      } else {
-	        System.out.println("Chromebook " + tag + " loaned out");
-	      }
-	      // return true;
-
-	      isLoaned = false;
-
-	      for (int i = 0; i < chromebookList.size(); i++) {
-	        if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-	            && chromebookList.get(i).getIsAvailable() == true) {
-	          chromebookList.get(i).setIsAvailable(false);
-	          chromebookList.get(i).setDueDate(due);
-	          isLoaned = true;
-	        }
-	      }
-	      // return isLoaned;
-
-	    }
+		// write your code here
+		
+		
+	}
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
@@ -326,11 +273,6 @@ public class ResourceCentre {
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-<<<<<<< HEAD
-
-		// write your code here
-		// write your code here
-=======
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag=Helper.readString("Enter asset tag>");
 		Boolean isReturned = doReturnChromebook(chromebookList,tag);
@@ -339,13 +281,12 @@ public class ResourceCentre {
 		}else {
 			System.out.println("chromebook" +tag+"returned");
 		}
+
 		
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
+
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
+
+
 	public String concatenate(String one, String two){
         return "hello";
 }
@@ -353,7 +294,5 @@ public class ResourceCentre {
 	public String concatenate_Santhini(String one, String two){
         return "hello";
 }
-// return hello1
-	// return 1
-	
+
 }
