@@ -305,11 +305,6 @@ public class ResourceCentre {
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-<<<<<<< HEAD
-
-		// write your code here
-		// write your code here
-=======
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag=Helper.readString("Enter asset tag>");
 		Boolean isReturned = doReturnChromebook(chromebookList,tag);
@@ -318,13 +313,7 @@ public class ResourceCentre {
 		}else {
 			System.out.println("chromebook" +tag+"returned");
 		}
-		
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	public String concatenate(String one, String two){
         return "hello";
 }
