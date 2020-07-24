@@ -122,7 +122,7 @@ public class ResourceCentreTest {
 
 
 	@Test
-	public void doLoanChromebookTest() {
+	public void doLoanChromebookTest() //elaine {
 		//fail("Not yet implemented");
 		// write your code here
 		boolean isfound=false;
