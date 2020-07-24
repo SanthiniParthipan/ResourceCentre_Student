@@ -238,7 +238,7 @@ public class ResourceCentre {
 	      System.out.println("Chromebook " + tag + " loaned out");
 	    }
 	    // return true;
-
+	    
 	    isLoaned = false;
 
 	    for (int i = 0; i < chromebookList.size(); i++) {
