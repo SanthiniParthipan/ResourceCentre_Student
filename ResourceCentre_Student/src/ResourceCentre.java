@@ -293,5 +293,9 @@ public class ResourceCentre {
         return "hello";
 }
 
-
+	public String concatenate_Santhini(String one, String two){
+        return "hello";
+}
+// return hello1
+	
 }
