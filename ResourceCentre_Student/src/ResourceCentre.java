@@ -171,8 +171,6 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-<<<<<<< HEAD
-//		Chromebook cb =null;
 		// FIRDAUS
 		// write your code here
 		String assetTag = Helper.readString("Enter asset tag > ");
@@ -181,32 +179,13 @@ public class ResourceCentre {
 		
 		Chromebook cb = new Chromebook(assetTag, assetDescription, os);
 		return cb;
-=======
-		Chromebook cb =null;
-	    // FIRDAUS
-        // write your code here
-        String assetTag = Helper.readString("Enter asset tag > ");
-        String assetDescription = Helper.readString("Enter description > ");
-        String os = Helper.readString("Enter operating system > ");
-       
-        Chromebook cb = new Chromebook(assetTag, assetDescription, os);
-        return cb;
-
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-<<<<<<< HEAD
 		// write your code here
 		//FIRDAUS
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
-=======
-	    //FIRDAUS
-        chromebookList.add(cb);
-        System.out.println("Chromebook added");
-
->>>>>>> branch 'master' of https://github.com/SanthiniParthipan/ResourceCentre_Student.git
 	}
 	
 	//================================= Option 3 Loan =================================
