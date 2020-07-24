@@ -99,7 +99,6 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-
 	  public  void doLoanCamcorderTest() {
 	    //fail("Not yet implemented");
 	    // write your code here
@@ -120,17 +119,26 @@ public class ResourceCentreTest {
 	      
 	  }
 
-
-	
-
 	@Test
-	public void doLoanChromebookTest() {
+
+	public void doLoanChromebookTest() { //elaine 
 
 		//fail("Not yet implemented");
-		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "22/07/2020");
-		assertEquals("Test that Chromebook arraylist size is 2?", 1, chromebookList.size());
-		ResourceCentre.doLoanChromebook(chromebookList, cc1.getAssetTag(), cc1.getDueDate());
-	}
+		// write your code here
+
+		boolean isfound=false;
+		for(int i =0;i<chromebookList.size();i++) {
+		    if(chromebookList.get(i).getIsAvailable() == true) {
+		      isfound=true;
+		      System.out.println("Test pass!");
+		      
+		    }else {
+		      isfound=false;
+		      System.out.println("test fail");
+		    }
+		    }
+		      
+		  }
 
 	
 	@Test
