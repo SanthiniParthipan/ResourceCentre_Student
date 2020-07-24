@@ -85,11 +85,25 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public void doLoanCamcorderTest() {
-		//fail("Not yet implemented");
-		// write your code here
-		
-	}
+	  public  void doLoanCamcorderTest() {
+	    //fail("Not yet implemented");
+	    // write your code here
+	    
+	    boolean isfound=false;
+	    for(int i =0;i<camcorderList.size();i++) {
+	    if(camcorderList.get(i).getIsAvailable()==true ) {
+	      isfound=true;
+	      System.out.println("Test pass!");
+	      
+	    }else {
+	      isfound=false;
+	      System.out.println("test fail");
+	    }
+	    
+	      
+	    }
+	      
+	  }
 
 	@Test
 	public void doLoanChromebookTest() {
