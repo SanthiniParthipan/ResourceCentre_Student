@@ -211,7 +211,7 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-	    // JIA XIN & ELAINE
+	    // JIAXIN & ELAINE
 	      ResourceCentre.retrieveAllChromebook(chromebookList);
 	      String tag1 = Helper.readString("Enter assest tag > ");
 	      String due = Helper.readString("Enter due date > ");
