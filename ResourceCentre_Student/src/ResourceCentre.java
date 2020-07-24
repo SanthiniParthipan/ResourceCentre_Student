@@ -211,7 +211,7 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-	    // KWEH JIA XIN & ELAINE
+	    //  JIA XIN & ELAINE
 	    ResourceCentre.retrieveAllChromebook(chromebookList);
 	    String tag1 = Helper.readString("Enter assest tag > ");
 	    String due = Helper.readString("Enter due date > ");
@@ -226,7 +226,7 @@ public class ResourceCentre {
 	  }
 
 	  public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-	    // KWEH JIA XIN & ELAINE
+	    //  JIA XIN & ELAINE
 	    ResourceCentre.retrieveAllChromebook(chromebookList);
 	    String tag = Helper.readString("Enter assest tag > ");
 	    String due = Helper.readString("Enter due date > ");
